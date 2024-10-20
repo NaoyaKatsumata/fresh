@@ -35,11 +35,13 @@
         npmをインストール<br>
         　npm install
     </li>
-    <li>npmを起動
+    <li>npmを起動<br>
         npm run dev
     </li>
     <li>ダミーデータの投入<br>
+        　phpコンテナに移動<br>
         　docker-compose exec php bash<br>
+        　データ投入<br>
         　php artisan migrate<br>
         　php artisan db:seed
     </li>
@@ -56,5 +58,7 @@
     <li>DB：Mysql</li>
 </ul>
 <h1>ER図</h1>
+<img src="storage/img/ER.png">
+
 <h1>URL</h1>
 <p>開発環境:http://localhost/products</p>
