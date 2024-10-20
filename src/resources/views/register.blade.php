@@ -26,7 +26,7 @@
                     <p>商品画像</p>
                     <span class="bg-red-500 mx-4 px-2 text-white">必須</span>
                 </div>
-                <img id="previewImage" class="hidden w-64 h-64 object-cover rounded-md" alt="Image Preview">
+                <img id="previewImage" class="hidden w-[50%]" alt="Image Preview">
                 <input type="file" id="imageInput" name="image" class="mt-4">
                 @if ($errors->has('image'))
                     <div class="text-red-500">{{ $errors->first('image') }}</div>
