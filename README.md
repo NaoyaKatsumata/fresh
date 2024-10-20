@@ -58,7 +58,7 @@
     <li>DB：Mysql</li>
 </ul>
 <h1>ER図</h1>
-<img src="storage/img/ER.png">
+<img src="src/public/img/ER.png">
 
 <h1>URL</h1>
 <p>開発環境:http://localhost/products</p>
