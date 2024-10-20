@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Product;
+use App\Models\Season;
 
 class ProductSeason extends Model
 {
@@ -15,5 +16,10 @@ class ProductSeason extends Model
     public function products()
     {
         return $this->belongsTo(Product::class);
+    }
+
+    public function seasons()
+    {
+        return $this->belongsTo(Season::class);
     }
 }
