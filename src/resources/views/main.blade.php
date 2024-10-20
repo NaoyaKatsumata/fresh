@@ -56,7 +56,7 @@
         <div class="w-[80%] flex flex-wrap">
             @foreach($fruits as $fruit)
             <a href="{{'/products/'.$fruit->id}}" class="w-[30%] mr-[3%] mb-8">
-                <img src="{{ asset('storage/'.$fruit->image)}}" alt="{{$fruit->image}}" class="w-full h-[80%]">
+                <img src="{{ asset($fruit->image)}}" alt="{{$fruit->image}}" class="w-full h-[80%]">
                 <div class="flex flex-row justify-between items-center px-4 bg-white h-[20%]">
                     <p class="">{{$fruit->name}}</p>
                     <p class="">¥{{$fruit->price}}</p>

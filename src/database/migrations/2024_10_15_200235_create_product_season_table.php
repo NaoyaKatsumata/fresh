@@ -15,8 +15,8 @@ return new class extends Migration
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
 
-            $table->foreign('product_id')->references('id')->on('products');
-            $table->foreign('season_id')->references('id')->on('seasons');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');;
+            $table->foreign('season_id')->references('id')->on('seasons')->onDelete('cascade');;
         });
     }
 

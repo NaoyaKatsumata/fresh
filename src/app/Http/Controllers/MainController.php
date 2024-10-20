@@ -51,7 +51,10 @@ class MainController extends Controller{
     }
 
     public function description($productId){
+        $fruit = Product::find($productId);
+        $seasons = Product::with('productSeason')->find($productId);
+        // dd($fruit);
 
-        return view('description');
+        return view('description',compact('fruit','seasons'));
     }
 }
