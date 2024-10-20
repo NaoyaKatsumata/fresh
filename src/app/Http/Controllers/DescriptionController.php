@@ -65,6 +65,8 @@ class DescriptionController extends Controller
         }
 
         $url = Storage::url($file);
+
+        return redirect('/products');
     }
 
     public function delete($productId){
