@@ -3,7 +3,7 @@
 @section('content')
     <div class="flex flex-row justify-between items-center">
         <h1 class="text-3xl font-bold text-gray-900">商品一覧</h1>
-        <a href="/test" class="py-2 px-8 bg-amber-500 rounded-[5px] hover:bg-amber-600">+ 商品を追加</a>
+        <a href="/products/register" class="py-2 px-8 bg-amber-500 rounded-[5px] hover:bg-amber-600">+ 商品を追加</a>
     </div>
     <div class="my-4 flex flex-row">
         <!-- 検索＆ソートナビゲーション -->

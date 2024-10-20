@@ -57,4 +57,8 @@ class MainController extends Controller{
 
         return view('description',compact('fruit','seasons'));
     }
+
+    public function addProductsView(){
+        return view('register');
+    }
 }
