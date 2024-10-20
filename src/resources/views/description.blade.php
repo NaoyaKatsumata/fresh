@@ -35,13 +35,14 @@
                 <div class="flex flex-raw mt-4">
                     <div class="w-[50%] mr-4">
                         @if ($errors->has('image'))
-                            <input type="file" class="mb-4 mt-auto py-2 rounded-[5px]" name="image">
+                            <img id="previewImage" class="hidden w-full" alt="Image Preview">
+                            <input type="file" id="imageInput" name="image" class="mb-4 mt-auto py-2 rounded-[5px]">
                             <div class="text-red-500">
                                 {{ $errors->first('image') }}
                             </div>
                         @else
-                            <img src="{{ asset($fruit->image)}}" alt="test" class="w-full">
-                            <input type="file" class="mb-4 mt-auto py-2 rounded-[5px]" name="image">
+                            <img id="previewImage" src="{{ asset($fruit->image)}}" class="w-full" alt="Image Preview">
+                            <input type="file" id="imageInput" name="image" class="mb-4 mt-auto py-2 rounded-[5px]">
                         @endif
                     </div>
                     <div class="w-[50%] ml-4">
@@ -103,6 +104,21 @@
                 </div>
             </form>
         </div>
-        
     </div>
+
+    <!-- 選択した写真をリアルタイムで表示するスクリプト -->
+    <script>
+        document.getElementById('imageInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const previewImage = document.getElementById('previewImage');
+                    previewImage.src = e.target.result;
+                    previewImage.classList.remove('hidden');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 @endsection

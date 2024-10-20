@@ -139,9 +139,9 @@
                 arrowIcon.classList.toggle('rotate-180');
                 
                 let url = new URL(window.location.href);
-                url.searchParams.set('sort', selectedValue); // クエリパラメータにsortを追加
-                url.searchParams.set('fruitName', fruitNameInput.value); // クエリパラメータにsortを追加
-                window.location.href = url.toString(); // ページをリロード
+                url.searchParams.set('sort', selectedValue);
+                url.searchParams.set('fruitName', fruitNameInput.value);
+                window.location.href = url.toString();
                 sortValue.value = selectedValue;
                 fruitValue.value = fruitNameInput.value
                 priceForm.submit();
