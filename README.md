@@ -36,7 +36,7 @@
         　npm install
     </li>
     <li>npmを起動<br>
-        npm run dev
+        　npm run dev
     </li>
     <li>ダミーデータの投入<br>
         　phpコンテナに移動<br>
