@@ -9,7 +9,7 @@
         　docker-compose up -d --build
     </li>
     <li>composerをインストール<br>
-        　docker-compose exec php bash<br>composer install
+        　docker-compose exec php bash<br>　composer install
     </li>
     <li>.envファイルをコピーし編集<br>
         　cp .env.example .env<br>
