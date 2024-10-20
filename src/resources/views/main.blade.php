@@ -8,7 +8,7 @@
     <div class="my-4 flex flex-row">
         <!-- 検索＆ソートナビゲーション -->
         <div class="w-[20%] mr-4">
-        
+
             <!-- 商品名で検索 -->
             <form action="/products" method="post">
                 @csrf
@@ -28,7 +28,6 @@
                                     }
                                 @endphp">
                             @php
-                                $test = "";
                                 if(empty($sort)){
                                     echo "選択してください";
                                 }elseif($sort==='lowest'){
@@ -49,6 +48,20 @@
                         </svg>
                     </div>
                 </div>
+                @if(!empty($sort))
+                    <div class="inline-flex border border-yellow-400 mt-4 px-4 py-2 rounded-[50px]">
+                        <a href="/products" class="flex items-center">
+                            @if($sort === 'lowest')安い順に表示
+                            @elseif($sort === 'highest')高い順に表示
+                            @endif
+                            <svg id="custom-x-circle" class="w-6 h-6 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="#A0A0A0">
+                                <circle cx="12" cy="12" r="9" stroke="#FBBF24" stroke-width="2" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="" d="M8 8l8 8M8 16l8-8" stroke="#FBBF24"/>
+                            </svg>
+                        </a>
+                    </div>
+                @elseif($sort==='highest')
+                @endif
                 <hr class="w-full mt-4 border-t-2 border-gray-300">
             </form>
         </div>
