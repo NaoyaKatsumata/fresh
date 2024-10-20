@@ -14,7 +14,7 @@
     <li>.envファイルをコピーし編集<br>
         　cp .env.example .env<br>
         　nano .env<br>
-        (テキストエディタがない場合はインストール)<br>
+        　(テキストエディタがない場合はインストール)<br>
         　apt install nano<br><br>
         　.env編集箇所<br>
         　DB_CONNECTION=mysql<br>
